@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main (void){
+
+  setlocale(LC_ALL,"");;
+  float n=0, custo;
+  printf("digite seu salário?");
+  scanf(" %f",&n);
+
+  if (n<=1903.98){
+    printf("Imposto de renda = %f",n);
+  }
+
+  else if (n>=1903.99 && n<=2826.65){
+    custo=n*7.5-142.80;
+    printf("Imposto de renda = %f",custo);
+  }
+
+  else if (n>=2826.66 && n<=3751.05){
+    custo=n*15-354.80;
+    printf("Imposto de renda = %f",custo);
+  }
+
+  else if (n>=3751.06 && n<=4664.68){
+    custo=n*22.5-636.13;
+    printf("Imposto de renda = %f",custo);
+  }
+
+  else if (n>=4664.69){
+    custo=n*27.5-869.36;
+    printf("Imposto de renda = %f",custo);
+  }
+
+  return 0;
+}
