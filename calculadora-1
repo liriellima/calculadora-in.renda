@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main (void){
+
+  setlocale(LC_ALL,"");
+
+  int a1=0,b2=0,c=0;
+  printf(" escreva os numeros que deseja fazer a operação:");
+  scanf(" %d %d",&a1,&b2);
+
+  printf(" escolha a operção? \o[1]=soma \o[2]=subtração \o[3]=multiplicação \o[4]=divisão\o");
+  scanf( "%d",&c);
+
+  if (c==1){
+  printf(" soma = %d",a1+b2);
+  }
+
+  else if (c==2){
+  printf(" subtração = %d",a1-b2);
+  }
+
+  else if (c==3){
+  printf(" multiplicação = %d",a1*b2);
+  }
+
+  else if (c==4){
+  printf(" divisão = %d",a1/b2);
+  }
+
+  return 0;
+}
+
